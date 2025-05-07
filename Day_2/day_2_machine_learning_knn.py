@@ -44,6 +44,7 @@ def knn_iris_gscv():
     x_test = transfer.transform(x_test)
     # Create a KNN classifier
     estimator = KNeighborsClassifier()
+    # 加入网格搜索
     # Define the parameter grid for GridSearchCV
     param_grid = {
         "n_neighbors": [1, 3, 5, 7, 9, 11],
